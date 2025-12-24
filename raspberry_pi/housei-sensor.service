@@ -1,0 +1,21 @@
+[Unit]
+Description=Housei Sensor Data Service
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/housei/raspberry_pi
+ExecStart=/usr/bin/python3 /home/pi/housei/raspberry_pi/sensor_to_firebase.py
+Restart=always
+RestartSec=10
+
+# Çevre değişkenleri (opsiyonel)
+# Environment=FIREBASE_PROJECT_ID=your-project-id
+
+# Log yönlendirme
+StandardOutput=append:/home/pi/housei/raspberry_pi/sensor.log
+StandardError=append:/home/pi/housei/raspberry_pi/sensor_error.log
+
+[Install]
+WantedBy=multi-user.target

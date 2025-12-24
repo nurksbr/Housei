@@ -1,0 +1,23 @@
+# Raspberry Pi Sensör to Firebase - Gerekli Kütüphaneler
+# =====================================================
+# 
+# Kurulum: pip install -r requirements.txt
+#
+
+# GPIO Kütüphanesi (Raspberry Pi için)
+gpiozero>=1.6.2
+
+# Firebase Admin SDK
+firebase-admin>=6.2.0
+
+# DHT Sensör Kütüphanesi (sıcaklık ve nem için)
+# Not: Bu kütüphane sadece Raspberry Pi üzerinde çalışır
+# Kurulum: sudo pip install Adafruit_DHT
+# Veya: pip install adafruit-circuitpython-dht
+Adafruit_DHT>=1.4.0
+
+# SPI için (MCP3008 ADC kullanıyorsanız)
+spidev>=3.5
+
+# Opsiyonel: RPi.GPIO (gpiozero'nun arka planında kullanabilir)
+RPi.GPIO>=0.7.1

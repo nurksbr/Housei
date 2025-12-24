@@ -1,0 +1,107 @@
+.layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: hsl(var(--bg-deep));
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    background: hsl(var(--bg-surface));
+    border-right: 1px solid rgba(var(--border-light));
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    padding: 1.5rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    padding-left: 0.5rem;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem 1rem;
+    border-radius: var(--radius-md);
+    color: hsl(var(--text-secondary));
+    transition: all 0.2s;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navItem:hover,
+.navItemActive {
+    background: rgba(var(--primary), 0.1);
+    color: hsl(var(--primary));
+}
+
+.navItemActive {
+    background: rgba(var(--primary), 0.15);
+}
+
+.mainWrapper {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    height: var(--header-height);
+    border-bottom: 1px solid rgba(var(--border-light));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    background: hsla(var(--bg-deep) / 0.8);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 40;
+}
+
+.pageTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: hsl(var(--text-primary));
+}
+
+.userProfile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.content {
+    padding: 2rem;
+    flex: 1;
+}
